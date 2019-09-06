@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:layout_marginBottom="@dimen/activity_vertical_margin"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@mipmap/logo"
+                android:scaleType="fitCenter"
+                android:layout_width="50dp" android:layout_height="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:fontFamily="serif-monospace"
+            android:text="ServeHot!"
+            android:textColor="@color/divider"
+            android:textSize="46sp" />
+
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:id="@+id/sign_in_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:inputType="number"
+                android:hint="Mobile" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/input_layout_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:id="@+id/sign_in_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password" android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center"
+            android:text="Sign In"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/icons"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+        android:id="@+id/sign_in_btn" />
+    <LinearLayout
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:layout_gravity="center"
+                android:text="Don't have an account? "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/to_sign_up"
+                android:clickable="true"
+                android:textSize="12dp"
+                android:text="Sign up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="or"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <Button
+            android:layout_gravity="center"
+            android:id="@+id/button_fb_sign_in"
+            android:text="Connect with Facebook"
+            android:textColor="@color/icons"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:backgroundTint="#565fa0"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="invisible"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textSize="12dp"
+            android:text="We will never publish on your facebook"
+            android:visibility="invisible"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible" />
+
+</LinearLayout>
